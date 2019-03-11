@@ -184,6 +184,14 @@ footer{
   bottom: 0;
   align-content: center;
 }
+
+#chart_div{
+  width: 40%;
+  margin: 0 auto;
+
+}
+
+
 .linksLOL{
  color: yellow;
 }

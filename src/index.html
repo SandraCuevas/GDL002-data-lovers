@@ -6,6 +6,7 @@
    <link href="https://postimg.cc/gallery/22apnbyk0/">
    <title>+LOLvers</title>
    <link rel="stylesheet" href="style.css" />
+
 </head>
 <body>
    <div class="header">
@@ -27,6 +28,12 @@
          <br> You can filter by name if you want to know more about the champion's stats.  
       </p>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/BGtROJeMPeE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
    </section>
    <!-- PANTALLA CAMPEONES-->
    <section id="CHAMPS" style="display:none">
@@ -76,9 +83,54 @@
       <p>Do you want to know how many CHAMPIONS are 
          in accordance of their role: 
       </p>
-      <nav>
-         <ul id = "tags"></ul>
+      <nav id="chartChamps">
+         <figure id = "tags"></figure>
+         <figure id="chart_div"></figure>
       </nav>
+     
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+  
+        // Load the Visualization API and the corechart package.
+        google.charts.load('current', {'packages':['corechart']});
+  
+        // Set a callback to run when the Google Visualization API is loaded.
+        google.charts.setOnLoadCallback(drawChart);
+  
+        // Callback that creates and populates a data table,
+        // instantiates the pie chart, passes in the data and
+        // draws it.
+        function drawChart() {
+  
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Role');
+          data.addColumn('number', 'Champions');
+          data.addRows([
+            ['Fighter', 66],
+            ['Tank', 40],
+            ['Mage', 52],
+            ['Assassin', 33],
+            ['Support', 27],
+            ['Marksman', 24],
+            ['Melee',1]
+          ]);
+  
+          // Set chart options
+          var options = {'title':"CHAMPION'S ROLE",
+                         'backgroundColor':'black',
+                         'legend':{position: 'left', textStyle: {color: 'white', fontSize: 16}},
+                         'is3D':true,
+                         'width':400,
+                         'height':300};
+  
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+          chart.draw(data, options);
+        }
+      </script>
+      
+   
       <!--
          <h1>COMMENTS</h1>
          <textarea rows="4" cols="50">
@@ -95,7 +147,12 @@
       
      
          <a href = "https://champion.gg/statistics/#?sortBy=general.experience&order=ascend&roleSort=" class = "linksLOL" alt="tabla"> Mas Guias LoL </a>
-      
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
    </section>
    <footer class = "pie-pagina" >
       <p>We hope this information will be useful for you.
