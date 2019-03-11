@@ -1,45 +1,37 @@
 <!DOCTYPE html>
-<html lang="es" dir="ltr" data-cast-api-enabled="true"></html>
-  <head>
-    <meta name="viewport" charset="utf-8">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link href="https://postimg.cc/gallery/22apnbyk0/">
-    <title>+LOLvers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-
-      <div class="header">
+<html lang="es" dir="ltr" data-cast-api-enabled="true">
+<head>
+   <meta name="viewport" charset="utf-8">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+   <link href="https://postimg.cc/gallery/22apnbyk0/">
+   <title>+LOLvers</title>
+   <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+   <div class="header">
       <a href="#default" class="logo"></a>
       <img id="lolvers" src="https://i.postimg.cc/hjjSdHxj/TITULO.png" >
-          <div class="header-right">
-          <button id="HOME">WELCOME</button>
-          <button id="CHAMPIONS">CHAMPIONS</button>
-          <button id="MOREINFO">+INFO</button>
-          </div>
+      <div class="header-right">
+         <button id="HOME">WELCOME</button>
+         <button id="CHAMPIONS">CHAMPIONS</button>
+         <button id="MOREINFO">+INFO</button>
       </div>
-
-
-
-        <!-- PANTALLA INICIO-->
-        <section id="WELCOME">
-            <h1>"WELCOME"</h1>
-            <p class="Intro"> This website was created for new users, who want to level up LOL easily. 
-              <br>When you go to the CHAMPIONS section, you could see all of the champions and 
-              <br>if you roll over to one of those you can find important info about them,  
-              <br>for instance the attack level, defense, magic or difficulty, a champion has. 
-              <br> You can filter by name if you want to know more about the champion's stats.  
-            </p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/BGtROJeMPeE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            
-            
-        </section>
-
-
-
-        <!-- PANTALLA CAMPEONES-->
-        <section id="CHAMPS" style="display:none">
-          <h2>"CHAMPIONS"</h2>
-        <!--
+   </div>
+   <!-- PANTALLA INICIO-->
+   <section id="WELCOME">
+      <h1>"WELCOME"</h1>
+      <p class="Intro"> This website was created for new users, who want to level up LOL easily. 
+         <br>When you go to the CHAMPIONS section, you could see all of the champions and 
+         <br>if you roll over to one of those you can find important info about them,  
+         <br>for instance the attack level, defense, magic or difficulty, a champion has. 
+         <br> You can filter by name if you want to know more about the champion's stats.  
+      </p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/BGtROJeMPeE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            
+   </section>
+   <!-- PANTALLA CAMPEONES-->
+   <section id="CHAMPS" style="display:none">
+      <h2>"CHAMPIONS"</h2>
+      <!--
          <label id="RoleGame">ROLE:</label>
           <select id= "role">
              <option value="1">Assassin</option>
@@ -50,92 +42,69 @@
              <option value="6">Tank</option>
              <option value="7">Malee</option>
           </select>-->
-         
-
-          <label for="champName"></label>
-          <input type="text" placeholder="Champion's Name" name="champName" id="nameChamp" required/>
-          <br>
-          <br>
-          <button type="submit" name="button" id="searchBtn">SEARCH</button>
-          <button id = "showAll">ALL CHAMPIONS</button>
-          <div id="champBox"></div>
-          
-
+      <label for="champName"></label>
+      <input type="text" placeholder="Champion's Name" name="champName" id="nameChamp" required/>
+      <br>
+      <br>
+      <button type="submit" name="button" id="searchBtn">SEARCH</button>
+      <button id = "showAll">ALL CHAMPIONS</button>
+      <div id="champBox"></div>
+      <nav class = "infoChampBtn">
+         <p> To see in descending order, click on!</p>
+         <button id= "attack" class="fas fa-haykal"> <br>attack</button>
+         <button id= "defense" class="fas fa-hand-paper"> <br>defense</button>
+         <button id= "magic" class="fas fa-hat-wizard"> <br>magic</button>
+         <button id= "difficulty" class="fas fa-icicles"> <br>difficulty</button>
+      </nav>
+      <br>
+      <p> To filter by role, click on!</p>
+      <nav >
+         <img class= "roleBtn" alt="assassin" id="assassin" src="https://i.postimg.cc/LhcmSPnt/Assassin.png">  
+         <img class= "roleBtn" alt="fighter" id="fighter" src="https://i.postimg.cc/QK1GC6Hp/fighter.png">
+         <img class= "roleBtn" alt="mage" id="mage" src="https://i.postimg.cc/2bPNzp8k/Mage.png">
+         <img class= "roleBtn" alt="marksman" id="marksman" src="https://i.postimg.cc/Q9BrGNDY/marksman.png">
+         <img class= "roleBtn" alt="support" id="support" src="https://i.postimg.cc/94gjnR6q/support.png">
+         <img class= "roleBtn" alt="tank" id="tank" src="https://i.postimg.cc/p9LHCY6H/tank.png">
+      </nav>
+      <p>ASSASSIN  ||   FIGHTER   ||   MAGE  ||  MARKSMAN   ||  SUPPORT   ||  TANK</p>
+      <div id = "contentIdChamps">
+      </div>
+   </section>
+   <!-- PANTALLA COMUNIDAD-->
+   <section id="moreInfo" style= "display:none">
+      <h2>"+INFO"</h2>
+      <p>Do you want to know how many CHAMPIONS are 
+         in accordance of their role: 
+      </p>
+      <nav>
+         <ul id = "tags"></ul>
+      </nav>
+      <!--
+         <h1>COMMENTS</h1>
+         <textarea rows="4" cols="50">
+         </textarea>
+         <br>
+         <button id="submit">"SUBMIT"</button>
+         -->
+      <h1>LINKS LEAGUE</h1>
       
-  
-          
-          <nav class = "infoChampBtn">
-                  <p> To see in descending order, click on!</p>
-
-                  <button id= "attack" class="fas fa-haykal"> <br>attack</button>
-                  <button id= "defense" class="fas fa-hand-paper"> <br>defense</button>
-                  <button id= "magic" class="fas fa-hat-wizard"> <br>magic</button>
-                  <button id= "difficulty" class="fas fa-icicles"> <br>difficulty</button>
-              
-          </nav>
-          <br>
-          <p> To filter by role, click on!</p>
-          <nav >
+         <a href = "https://lan.leagueoflegends.com/es/" class="linksLOL" alt="paginaOficial"> LoL Official Site || </a>
       
-                <img class= "roleBtn" alt="assassin" id="assassin" src="https://i.postimg.cc/LhcmSPnt/Assassin.png">  
-                <img class= "roleBtn" alt="fighter" id="fighter" src="https://i.postimg.cc/QK1GC6Hp/fighter.png">
-                <img class= "roleBtn" alt="mage" id="mage" src="https://i.postimg.cc/2bPNzp8k/Mage.png">
-                <img class= "roleBtn" alt="marksman" id="marksman" src="https://i.postimg.cc/Q9BrGNDY/marksman.png">
-                <img class= "roleBtn" alt="support" id="support" src="https://i.postimg.cc/94gjnR6q/support.png">
-                <img class= "roleBtn" alt="tank" id="tank" src="https://i.postimg.cc/p9LHCY6H/tank.png">
-       
-          </nav> 
-          
-          
-          <div id = "contentIdChamps">
-            
-          </div>
-
-        </section>
-
-        <!-- PANTALLA COMUNIDAD-->
-        <section id="moreInfo" style= "display:none">
-            <h2>"+INFO"</h2>
-            <p>Do you want to know how many CHAMPIONS are 
-              in accordance of their role: </p>
-              <nav>
-                <ul id = "tags"></ul>
-                
-              
-              </nav>
-              
-            <!--
-            <h1>COMMENTS</h1>
-            <textarea rows="4" cols="50">
-            </textarea>
-            <br>
-            <button id="submit">"SUBMIT"</button>
-            -->
-            <h1>LINKS LEAGUE</h1>
-            <p>
-            <a href ="https://lan.leagueoflegends.com/es/" class="linksLOL" > LoL Official Site </a>
-            </p>
-            <p>
-            <a href="https://lan.leagueoflegends.com/es/"class="linksLOL"> LoL Guides</a>
-            </p>
-            <p>
-              <a href="https://champion.gg/statistics/#?sortBy=general.experience&order=ascend&roleSort="class="linksLOL">Mas Guias LoL</a>
-              </p>
-
-        </section>
-
-         
-
-     <footer class="pie-pagina">
-        <p>We hope this information will be useful for you.
-          <br> You could leave us a comment or suggestions in our section of LEAGUE.
-        </p>
       
-     </footer>
-
-    <div id="root"></div>
-    <script src="./data/lol/lol.js"></script> 
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-  </body>
+         <a href = "https://lan.leagueoflegends.com/es/" class="linksLOL" alt="guiasdLol"> LoL Guides || </a>
+      
+     
+         <a href = "https://champion.gg/statistics/#?sortBy=general.experience&order=ascend&roleSort=" class = "linksLOL" alt="tabla"> Mas Guias LoL </a>
+      
+   </section>
+   <footer class = "pie-pagina" >
+      <p>We hope this information will be useful for you.
+         <br> 
+      </p>
+   </footer>
+   <div id="root"></div>
+   <script src="./data/lol/lol.js"></script> 
+   <script src="data.js"></script>
+   <script src="main.js"></script>
+</body>
 </html>

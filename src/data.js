@@ -20,7 +20,7 @@ window.totalData={
     
 
     //cuando el usuario da clik al boton igual al tag(role) que hay en data lo devuelve en un array 
-    console.log(roleArray)
+    //console.log(roleArray)
     return roleArray;
    
    },
