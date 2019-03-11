@@ -1,4 +1,5 @@
 require('../src/data.js');
+const lol= require('../src/data/lol/lol.json');
 const lolDataMock= require('../src/data/lol/lolDataMock.json');
 const orderByAttackMock= require('../src/data/lol/orderByAttackMock.json');
 /*const sortDataMock  = require('../src/data/pokemon/sortDataMck.json');
@@ -15,7 +16,7 @@ describe('orderAttack',()=>{
     expect(typeof window.totalData.orderByAttack).toBe('function');
   });
   it ('should return a subset of champions with the highest attack', ()=>{
-    expect (window.totalData.orderByAttack(lolDataMock.lol,'"attack":10')).toEqual(orderByAttackMock);
+    expect (typeof window.totalData.orderByAttack(lol.LOL.data,'"attack":10')).toEqual(orderByAttackMock);
   });
 });
 
