@@ -27,7 +27,9 @@
          <br>for instance the attack level, defense, magic or difficulty, a champion has. 
          <br> You can filter by name if you want to know more about the champion's stats.  
       </p>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/BGtROJeMPeE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            
+      <article id="videoLol">
+      <iframe id="playVideo" width="800" height="600" src="https://www.youtube.com/embed/BGtROJeMPeE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            
+      </article>
       <br>
       <br>
       <br>
@@ -76,6 +78,12 @@
       <p>ASSASSIN  ||   FIGHTER   ||   MAGE  ||  MARKSMAN   ||  SUPPORT   ||  TANK</p>
       <div id = "contentIdChamps">
       </div>
+      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+      <br>
+      <br>
+      <br>
+      <br>
+      
    </section>
    <!-- PANTALLA COMUNIDAD-->
    <section id="moreInfo" style= "display:none">
@@ -83,10 +91,10 @@
       <p>Do you want to know how many CHAMPIONS are 
          in accordance of their role: 
       </p>
-      <nav id="chartChamps">
+      <aside id="chartChamps">
          <figure id = "tags"></figure>
          <figure id="chart_div"></figure>
-      </nav>
+      </aside>
      
       <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
       <script type="text/javascript">
@@ -118,11 +126,11 @@
   
           // Set chart options
           var options = {'title':"CHAMPION'S ROLE",
-                         'backgroundColor':'black',
+                         'backgroundColor':'transparent',
                          'legend':{position: 'left', textStyle: {color: 'white', fontSize: 16}},
                          'is3D':true,
-                         'width':400,
-                         'height':300};
+                         'width':800,
+                         'height':600};
   
           // Instantiate and draw our chart, passing in some options.
           var chart = new google.visualization.PieChart(document.getElementById('chart_div'));

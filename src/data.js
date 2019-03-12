@@ -26,13 +26,13 @@ window.totalData={
    },
 
 
-  infosChamps: (infoType) =>{ //se ingresa como parametro infotype que es el arreglo con el 
+  infosChamps: (infoType, LOLdata) =>{ //se ingresa como parametro infotype que es el arreglo con el 
     //ordenamiento que mas abajo se define (magic, defensa, ataque y dificultad).
     let dataArray = [];
-    Object.keys(window.LOL.data).forEach(function(key){
+    Object.keys(LOLdata).forEach(function(key){
       //convierte las keys de mi objeto en un array, con forEach: recorre la data, 
       //push: comprime la data dentro de mi arreglo de objetos lo cual lo ingresa de 1 x 1 a mi dataArray 
-      dataArray.push(window.LOL.data[key]);
+      dataArray.push(LOLdata[key]);
       return dataArray; //con return y push se rellena mi array vacio.
     });
   
@@ -51,26 +51,26 @@ window.totalData={
   },
   
   // METODOS REFACTORIZADA
-  orderByAttack: () => {
+  orderByAttack: (LOLdata) => {
     // se declara una funcion (metodo) con una variable que contiene el arreglo de mi ventana global con mi 
     // funcion de ordenamiento con parametro lo que encuentra en la data como propiedades de un objeto
-    let attackArray = window.totalData.infosChamps("attack");
+    let attackArray = window.totalData.infosChamps("attack", LOLdata);
     
     return attackArray;
    },
 
-  orderByDefense: () =>{ 
-    let defenseArray = window.totalData.infosChamps("defense");
+  orderByDefense: (LOLdata) =>{ 
+    let defenseArray = window.totalData.infosChamps("defense",LOLdata);
            return defenseArray;
    },
 
-   orderByMagic: () =>{ 
-    let magicArray = window.totalData.infosChamps("magic");
+   orderByMagic: (LOLdata) =>{ 
+    let magicArray = window.totalData.infosChamps("magic",LOLdata);
     return magicArray;
    },
 
-    orderByDifficulty: () =>{ 
-    let difficultyArray = window.totalData.infosChamps("difficulty");
+    orderByDifficulty: (LOLdata) =>{ 
+    let difficultyArray = window.totalData.infosChamps("difficulty",LOLdata);
     return difficultyArray;
     },
 

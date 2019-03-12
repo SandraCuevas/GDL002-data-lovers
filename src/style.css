@@ -121,6 +121,8 @@ body{
   position: relative;
   border: 1px solid #ddd;
   align-self: flex-end;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .championBox #text-footer {
@@ -186,7 +188,7 @@ footer{
 }
 
 #chart_div{
-  width: 40%;
+  width: 60%;
   margin: 0 auto;
 
 }
@@ -195,33 +197,22 @@ footer{
 .linksLOL{
  color: yellow;
 }
-
-/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-@media screen and (max-width: 800px){
-  body {
-    font-size: 0.8vw;
-  }
-  
-
-}
-@media screen and (max-width: 300px){
-  body {
-    font-size: 0.2vw;
-    padding: 20%
-  }
-#attack, #defense, #magic, #difficulty{
-
-  font-size: 100%;
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color:gray; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
 }
 
-#attack:hover, #defense:hover,#magic:hover, #difficulty:hover {
-  
-  font-size: 150%;
-}
-
-  footer {
-    align-content: flex-end;
-  }
-  
-
+#myBtn:hover {
+  background-color: rgb(238, 215, 11); /* Add a dark-grey background on hover */
 }
