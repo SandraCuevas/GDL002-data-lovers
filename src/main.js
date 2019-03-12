@@ -8,6 +8,8 @@ function passPage1(){
   document.getElementById("CHAMPS").style.display="none";//se hace invisible mi pantalla
   document.getElementById("WELCOME").style.display="block";//muestra el bloque o pantallas
   document.getElementById("moreInfo").style.display="none";
+  document.getElementById("videoLol").innerHTML=`<iframe id="playVideo" width="800" height="600" src="https://www.youtube.com/embed/BGtROJeMPeE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+  
 }
 document.getElementById("HOME").addEventListener("click", passPage1); //salto de pagina con click
 
@@ -15,6 +17,7 @@ function passPage2(){
   document.getElementById("WELCOME").style.display="none";
   document.getElementById("CHAMPS").style.display="block";
   document.getElementById("moreInfo").style.display="none";
+  document.getElementById("videoLol").innerHTML="";
 }
 document.getElementById("CHAMPIONS").addEventListener("click", passPage2);
 
@@ -22,6 +25,7 @@ function passPage3(){
   document.getElementById("WELCOME").style.display="none";
   document.getElementById("CHAMPS").style.display="none";
   document.getElementById("moreInfo").style.display="block";
+  document.getElementById("videoLol").innerHTML="";
 }
 document.getElementById("MOREINFO").addEventListener("click", passPage3);
 
@@ -151,7 +155,7 @@ document.getElementById("attack").addEventListener("click", () => {
 
 document.getElementById("defense").addEventListener("click", () => {
   let arrayOrdered = (window.totalData.orderByDefense(dataLolvers));
-  
+  console.log(JSON.stringify(arrayOrdered));
   return showChampion(arrayOrdered);
 });
 document.getElementById("magic").addEventListener("click", () => {
@@ -163,6 +167,24 @@ document.getElementById("difficulty").addEventListener("click", () => {
   let arrayOrdered = (window.totalData.orderByDifficulty(dataLolvers));
   return showChampion(arrayOrdered);
 });
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
 
 let modesTags = window.totalData.modeRolChamps (dataLolvers);
 

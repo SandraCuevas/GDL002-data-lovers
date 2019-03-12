@@ -12,12 +12,11 @@ describe('lolDataMock',()=>{
 });
 
 describe('orderAttack',()=>{
-  it('is a function',()=>{
+  it('is a function',()=>{  
     expect(typeof window.totalData.orderByAttack).toBe('function');
   });
   it ('should return a subset of champions with the highest attack', ()=>{
-    expect (typeof window.totalData.orderByAttack(lol.LOL.data,'"attack":10')).toEqual(orderByAttackMock);
+    expect(window.totalData.orderByAttack(lol.data)).toEqual(orderByAttackMock);
   });
 });
-
 
